@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import RegisterReq from './LoginComponents/RegisterReq';
+import Register from './LoginComponents/Register';
+import ForgotReq from './LoginComponents/ForgotReq';
+import Forgot from './LoginComponents/Forgot';
+import Login from './LoginComponents/Login';
+import Pizzawindow from './Pizzawindow';
+import Indexes from "./Indexes";
+import Indexes1 from "./Indexes1";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+       <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/Forgot" element={<Forgot />} />
+            <Route path="/ForgotReq" element={<ForgotReq />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/RegisterReq" element={<RegisterReq />} />
+            <Route path="/Pizzawindow" element={<Pizzawindow />} />
+            <Route path="/payment" element={<Indexes1 />} />
+            <Route path="*" element={<Navigate to={"/"} />} />
+          </Routes>
     </div>
   );
 }
