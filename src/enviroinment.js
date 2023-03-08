@@ -1,5 +1,5 @@
 const env = {
-    apiurl: "http://localhost:5000"
+    apiurl: "https://pizza-backend-vwon.onrender.com"
 }
 
 export default env;
